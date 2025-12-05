@@ -1,0 +1,13 @@
+﻿@page "/designer/definitions/{definitionId}/edit"
+
+
+<PageTitle>Workflow definition</PageTitle>
+    
+
+            <MudPopoverProvider />
+            <WorkflowDefinitionEditorWrapper @ref="Editor"
+                                             DefinitionId="@DefinitionId"
+                                             WorkflowDefinitionExecuted="WorkflowDefinitionExecuted"
+                                             WorkflowDefinitionVersionSelected="WorkflowDefinitionVersionSelected"
+                                             ActivitySelected="OnActivitySelected" />
+        }

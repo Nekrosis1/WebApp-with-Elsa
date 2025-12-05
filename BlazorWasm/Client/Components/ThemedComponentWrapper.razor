@@ -1,0 +1,20 @@
+@using BlazorWasm.Client.Components
+@using Elsa.Studio.Contracts
+@* @inherits BackendComponentBase *@
+@inject IThemeService ThemeService
+
+<MudThemeProvider IsDarkMode="false" Theme="@ThemeService.CurrentTheme"/>
+<MudDialogProvider/>
+<MudSnackbarProvider />
+<div class="ax-elsa-wrapper">
+    @ChildContent
+</div>
+
+@code
+{
+    /// <summary>
+    /// The component to render.
+    /// </summary>
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = default!;
+}
